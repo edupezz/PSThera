@@ -102,6 +102,7 @@ export const ObjectsContainer = styled.div `
 
     width: 65vw;
     margin: 0 auto;
+    margin-bottom: 2vh;
 
     svg{
         width: 90%;
@@ -110,10 +111,10 @@ export const ObjectsContainer = styled.div `
 
 export const ButtonsContainer = styled.div`
 
-    width: 40vw;
+    width: 30vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-self: center;
     margin-top: 2vh;
 `
@@ -123,7 +124,7 @@ export const SignUpButton = styled(Button) `
     &&{
         background-color: transparent;
         color: #fff;
-        width: 14vw;
+        width: 13vw;
         border: thin solid white;
         -webkit-border-radius: 45px;
         -moz-border-radius: 45px;
@@ -142,7 +143,7 @@ export const LoginButton = styled(Button)`
     &&{
         background-color: white;
         color: #4621AD;
-        width: 14vw;
+        width: 13vw;
         border: thin solid white;
         -webkit-border-radius: 45px;
         -moz-border-radius: 45px;
