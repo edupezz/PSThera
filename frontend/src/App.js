@@ -1,6 +1,12 @@
+import React from 'react';
+
 import { GlobalStyled } from './GlobalStyle';
+
 import styled from 'styled-components';
 
+import useWindowSize from './hooks/WindowSize';
+import MobileHeader from './components/MobileHeader';
+import backgroundIMG from './assets/1.png';
 import objects from './assets/objects';
 
 import {
@@ -19,6 +25,11 @@ const AppContainer = styled.main `
 
   width: 100vw;
   height: 100vh;
+  background-image: url(${backgroundIMG});
+  background-size: cover;
+  background-origin: border-box;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
 `
 
 const AppContainerColorMask = styled.div `
@@ -32,16 +43,25 @@ const AppContainerColorMask = styled.div `
 `
 
 function App() {
+
+  const size = useWindowSize();
+  const screen = size.width;
+  console.log(size)
+
   return (
     <>
       <GlobalStyled />
+      {screen <= 500 ? <MobileHeader screen={screen} /> : ""} 
         <AppContainer>
           <AppContainerColorMask>
-            <LogoContainer>
-              <Logo>
-                <p>L</p>
-              </Logo>
-            </LogoContainer>
+            {screen <= 500 ?
+              "" : 
+              <LogoContainer>
+                <Logo>
+                  <p>L</p>
+                </Logo>
+              </LogoContainer>
+            }
             <MenuBar>
               <MenuLinks>
                 <ul>
