@@ -15,15 +15,14 @@ body {
     width: 100%;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    background-image: url(${backgroundIMG});
-    background-size: cover;
-    background-origin: border-box;
-    background-position: 0% 0%;
-    background-repeat: no-repeat;
 }
 
 a, a:active, :focus{
     color: #fff;
     text-decoration: none;
+}
+
+li {
+  list-style-type: none;
 }
 `
